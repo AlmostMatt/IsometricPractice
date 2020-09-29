@@ -8,8 +8,11 @@ public class Player : MonoBehaviour
     // private static Vector3 RIGHT = new Vector3(1, 0, 1).normalized;
     // private static Vector3 UP = new Vector3(-1, 0, 1).normalized;
     // XY plane
-    private static Vector3 RIGHT = new Vector3(2, -1, 0).normalized;
-    private static Vector3 UP = new Vector3(2, 1, 0).normalized;
+    //private static Vector3 RIGHT = new Vector3(2, -1, 0).normalized;
+    //private static Vector3 UP = new Vector3(2, 1, 0).normalized;
+    // XY plane, take 2
+    private static Vector3 RIGHT = new Vector3(2, 0, 0);
+    private static Vector3 UP = new Vector3(0, 1, 0);
 
     // Update is called once per frame
     void Update()
@@ -18,8 +21,11 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Vector2 inWorldDir = new Vector2(Input.GetAxis("Horizontal") * 2, Input.GetAxis("Vertical"));
+        //AccelToward(inWorldDir);
         Vector2 movementDir = Input.GetAxis("Horizontal") * RIGHT + Input.GetAxis("Vertical") * UP;
         AccelToward(movementDir);
+        
     }
 
     private void AccelToward(Vector2 movementDir)
