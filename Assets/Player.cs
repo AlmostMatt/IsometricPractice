@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     // private static Vector3 RIGHT = new Vector3(1, 0, 1).normalized;
     // private static Vector3 UP = new Vector3(-1, 0, 1).normalized;
     // XY plane
-    private static Vector3 RIGHT = new Vector3(-1, 1, 0).normalized;
-    private static Vector3 UP = new Vector3(1, 1, 0).normalized;
+    private static Vector3 RIGHT = new Vector3(2, -1, 0).normalized;
+    private static Vector3 UP = new Vector3(2, 1, 0).normalized;
 
     // Update is called once per frame
     void Update()
